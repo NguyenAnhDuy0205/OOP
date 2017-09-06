@@ -1,0 +1,19 @@
+package QL;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<GiaoVien> list = new ArrayList<GiaoVien>();
+
+		for (int i = 1; i < 5; i++) {
+			list.add(new GiaoVienCD("Nguyen Anh Duy " + i, i + 20, "Giang Vien", 2000, i * 1.7f));
+		}
+
+		for (int i = 1; i < 5; i++) {
+			list.add(new GiaoVienDH("Nguyen Khong Biet " + i, i + 20, "Tro Giang", 1000, i * 1.3f));
+		}
+	}
+
+}

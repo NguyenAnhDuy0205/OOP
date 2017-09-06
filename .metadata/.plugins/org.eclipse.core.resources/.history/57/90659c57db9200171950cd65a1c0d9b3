@@ -1,0 +1,82 @@
+package QL;
+
+public abstract class GiaoVien {
+
+	private String Ten;
+	private int Tuoi;
+	private String ChucVu;
+	private String LuongCoBan;
+	private String HeSoLuong;
+	private double luong;
+	
+	public abstract double TinhLuong();
+	
+	public void hienThi(){
+		System.out.printf("%-20s %-10d %-20s %-20s %-20s %-20f", Ten, Tuoi, ChucVu, LuongCoBan, HeSoLuong, luong);
+	}
+	public GiaoVien(String ten, int tuoi, String chucVu, String luongCoBan, String heSoLuong) {
+
+		Ten = ten;
+		Tuoi = tuoi;
+		ChucVu = chucVu;
+		LuongCoBan = luongCoBan;
+		HeSoLuong = heSoLuong;
+		luong = TinhLuong();
+	}
+	
+
+	public double getLuong() {
+		return luong;
+	}
+
+	public void setLuong(double luong) {
+		this.luong = luong;
+	}
+
+	
+	
+
+	public String getTen() {
+		return Ten;
+	}
+
+	public void setTen(String ten) {
+		if (ten.length() > 50 && ten != null) {
+			ten.substring(0, 50);
+		}
+		Ten = ten;
+	}
+
+	public int getTuoi() {
+		return Tuoi;
+	}
+
+	public void setTuoi(int tuoi) {
+		Tuoi = tuoi;
+	}
+
+	public String getChucVu() {
+		return ChucVu;
+	}
+
+	public void setChucVu(String chucVu) {
+		ChucVu = chucVu;
+	}
+
+	public String getLuongCoBan() {
+		return LuongCoBan;
+	}
+
+	public void setLuongCoBan(String luongCoBan) {
+		LuongCoBan = luongCoBan;
+	}
+
+	public String getHeSoLuong() {
+		return HeSoLuong;
+	}
+
+	public void setHeSoLuong(String heSoLuong) {
+		HeSoLuong = heSoLuong;
+	}
+
+}

@@ -1,0 +1,52 @@
+package quanlySach;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class QLsach {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		ArrayList<Sach> list = new ArrayList<Sach>();
+		int n;
+		int luachon;
+		int Array[] = null;
+		System.out.println("-------------------------------------------");
+		System.out.println("|						|");
+		System.out.println("| 1. Nhap vao so quyen sach.");
+		System.out.println("| 2. Hien thi toan bo quyen sach");
+		System.out.println("| 3. Liet ke sach xuat ban truoc nam n");
+		System.out.println("| 4. Thoat chuong trinh");
+		System.out.println("|						|");
+		System.out.println("-------------------------------------------");
+		do {
+			System.out.print("Moi ban nhap vao lua chon: ");
+			luachon = in.nextInt();
+			switch (luachon) {
+			case 1:
+				System.out.println("So luong sach: ");
+				n = in.nextInt();
+				Array = new int[n];
+				for (int i = 0; i < Array.length; i++) {
+					System.out.printf("--------------Moi ban nhap thong tin sach thu %d-------------", i+1);
+					Sach s = new Sach();
+					s.Nhap();
+					list.add(s);
+				}
+				break;
+
+			case 2:
+				System.out.println("------------------------------Thong tin sach---------------------------------");
+				System.out.printf("%-20s %-20s %-10s\n", "Ten sach", "Ten Tac Gia", "Nam Xuat Ban");
+				for (int i = 0; i < list.size(); i++) {
+					list.get(i).Xuat();
+
+				}
+				break;
+
+			default:
+				break;
+			}
+
+		} while (luachon != 4);
+	}
+}

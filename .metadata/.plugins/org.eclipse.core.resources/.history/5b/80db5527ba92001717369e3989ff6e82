@@ -1,0 +1,21 @@
+package quanlySach;
+
+import java.util.Scanner;
+
+public class trycatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int luachon;
+		try {
+			Scanner in = new Scanner(System.in);
+			luachon =  in.nextInt();
+		} catch (Exception e) {
+			// TODO: handle exception
+		System.out.println("ban");
+		}
+		System.out.println("asdasd");
+
+	}
+
+}

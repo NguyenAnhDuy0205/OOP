@@ -1,0 +1,37 @@
+package quanlySach;
+
+import java.util.Scanner;
+
+public class Sach {
+
+	private String tenSach;
+	private String tenTacGia;
+	private int namXB;
+	
+	public Sach(String tenSach, String tenTacGia, int namXB) {
+		
+		this.tenSach = tenSach;
+		this.tenTacGia = tenTacGia;
+		this.namXB = namXB;
+	}
+	
+	public Sach(){}
+	
+	public void Nhap(){
+		Scanner in = new Scanner(System.in);
+		System.out.println("--------------Moi ban nhap thong tin sach-------------");
+		System.out.printf("Nhap ten sach: ");
+		tenSach = in.nextLine();
+		System.out.printf("Nhap ten tac gia: ");
+		tenTacGia = in.nextLine();
+		System.out.printf("Nhap nam xuat ban: ");
+		namXB = in.nextInt();System.out.println();
+		
+	}
+	
+	public static void main(String[] args) {
+		Sach s = new Sach();
+		s.Nhap();
+	}
+	
+}

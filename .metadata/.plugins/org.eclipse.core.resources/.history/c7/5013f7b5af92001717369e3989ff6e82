@@ -1,0 +1,17 @@
+package quanlySach;
+
+public class Sach {
+
+	private String tenSach;
+	private String tenTacGia;
+	private int namXB;
+	
+	public Sach(String tenSach, String tenTacGia, int namXB) {
+		
+		this.tenSach = tenSach;
+		this.tenTacGia = tenTacGia;
+		this.namXB = namXB;
+	}
+	
+	
+}

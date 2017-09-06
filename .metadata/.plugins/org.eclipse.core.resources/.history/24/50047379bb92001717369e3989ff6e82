@@ -1,0 +1,31 @@
+package quanlySach;
+
+import java.util.Scanner;
+
+public class QuanLySach {
+
+	public static void main(String[] args) {
+		int luachon;
+		System.out.println("-------------------------------------------");
+		System.out.println("|						|");
+		System.out.println("| 1. Nhap vao so quyen sach.");
+		System.out.println("| 2. Hien thi toan bo quyen sach");
+		System.out.println("| 3. Liet ke sach xuat ban truoc nam n");
+		System.out.println("| 4. Thoat chuong trinh");
+		System.out.println("|						|");
+		System.out.println("-------------------------------------------");
+		
+		do {
+			try {
+				Scanner in = new Scanner(System.in);
+				System.out.println("Nhap so lua chon");
+				luachon = in.nextInt();
+			} catch (Exception e) {
+				System.out.println("Nhap lai");
+				luachon =0;
+			}
+		} while (luachon !=4);
+
+	}
+
+}
